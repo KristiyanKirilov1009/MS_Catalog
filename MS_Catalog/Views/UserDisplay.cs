@@ -122,7 +122,7 @@ namespace MS_Catalog.Presentation
         }
 
         /// <summary>
-        /// Gets all the movies or series and their ratings from database.
+        /// Gets all the movies and their ratings from database.
         /// </summary>
         private void SeeAllMovies()
         {
@@ -147,6 +147,10 @@ namespace MS_Catalog.Presentation
 
             MoviesCommands();
         }
+
+        /// <summary>
+        /// Gets all the series and their ratings from database.
+        /// </summary>
         private void SeeAllSeries()
         {
             Console.Clear();
@@ -173,7 +177,7 @@ namespace MS_Catalog.Presentation
 
 
         /// <summary>
-        /// Shows all the commands every user has when they read about movies or series.
+        /// Shows all the commands every user has when they read about movies.
         /// </summary>
         private void MoviesCommands()
         {
@@ -249,6 +253,10 @@ namespace MS_Catalog.Presentation
                 }
             }
         }
+
+        /// <summary>
+        /// Shows all the commands every user has when they read about series.
+        /// </summary>
         private void SeriesCommands()
         {
 
@@ -326,7 +334,7 @@ namespace MS_Catalog.Presentation
 
 
         /// <summary>
-        /// Shows additional information about movie or series by given id.
+        /// Shows additional information about movie by given id.
         /// </summary>
         private void ShowMovieDescr()
         {
@@ -353,6 +361,10 @@ namespace MS_Catalog.Presentation
                 ShowMovieDescr();
             }
         }
+
+        /// <summary>
+        /// Shows additional information about series by given id.
+        /// </summary>
         private void ShowSeriesDescr()
         {
             try
@@ -381,7 +393,7 @@ namespace MS_Catalog.Presentation
 
 
         /// <summary>
-        /// Adds movies or series to favourite list.
+        /// Adds movies to favourite list.
         /// </summary>
         private void AddToFM()
         {
@@ -406,6 +418,10 @@ namespace MS_Catalog.Presentation
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }
+
+        /// <summary>
+        /// Adds series to favourite list.
+        /// </summary>
         private void AddToFS()
         {
             try
@@ -432,7 +448,7 @@ namespace MS_Catalog.Presentation
 
 
         /// <summary>
-        /// Removes movies or series to favourite list.
+        /// Removes movies to favourite list.
         /// </summary>
         private void RemoveFM()
         {
@@ -457,6 +473,10 @@ namespace MS_Catalog.Presentation
                 Console.ForegroundColor = ConsoleColor.White;
             }
         }
+
+        /// <summary>
+        /// Removes series to favourite list.
+        /// </summary>
         private void RemoveFS()
         {
             try
@@ -483,7 +503,7 @@ namespace MS_Catalog.Presentation
 
 
         /// <summary>
-        /// Shows the favourite list of movies or series of a specified user.
+        /// Shows the favourite list of movies of a specified user.
         /// </summary>
         private void FavMovies()
         {
@@ -525,6 +545,10 @@ namespace MS_Catalog.Presentation
 
 
         }
+
+        /// <summary>
+        /// Shows the favourite list of series of a specified user.
+        /// </summary>
         private void FavSeries()
         {
             Console.Clear();

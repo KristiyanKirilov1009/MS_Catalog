@@ -1,0 +1,154 @@
+	    MS_Context ms_context = new MS_Context();
+	    Movie movie1 = new Movie();
+            movie1.Name = "Spider-Man: No Way Home";
+            movie1.Rating = 8.7;
+            movie1.Description = "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. " +
+                "When he asks for help from Doctor Strange the stakes become even more dangerous, " +
+                "forcing him to discover what it truly means to be Spider-Man.";
+
+            ms_context.Movies.Add(movie1);
+
+
+            Movie movie2 = new Movie();
+            movie2.Name = "The Requin";
+            movie2.Rating = 2.5;
+            movie2.Description = "A couple on a romantic getaway find themselves stranded at sea when a tropical storm sweeps away their villa. " +
+                "In order to survive, they are forced to fight the elements, while sharks circle below.";
+
+
+            ms_context.Movies.Add(movie2);
+
+            Movie movie3 = new Movie();
+            movie3.Name = "The 355";
+            movie3.Rating = 5.0;
+            movie3.Description = "A group of top female agents from American, British, Chinese, Columbian and German government agencies " +
+                "are drawn together to try and stop an organization from acquiring a deadly weapon to send the world into chaos.";
+
+            ms_context.Movies.Add(movie3);
+
+            Movie movie4 = new Movie();
+            movie4.Name = "Red Notice";
+            movie4.Rating = 6.3;
+            movie4.Description = "An Interpol-issued Red Notice is a global alert to hunt and capture the world's most wanted. " +
+                "But when a daring heist brings together the FBI's top profiler and two rival criminals, there's no telling what will happen.";
+
+            ms_context.Movies.Add(movie4);
+
+            Movie movie5 = new Movie();
+            movie5.Name = "American Siege";
+            movie5.Rating = 3.5;
+            movie5.Description = "An ex-NYPD officer-turned-sheriff of a small rural Georgia town " +
+                "has to contend with a gang of thieves who have taken a wealthy doctor hostage.";
+
+            ms_context.Movies.Add(movie5);
+
+		Movie movie6 = new Movie();
+                movie6.Name = "Nightmare Alley";
+                movie6.Rating = 7.2;
+                movie6.Description = "An ambitious carnival man with a talent for manipulating people with a few well-chosen words hooks up with a female psychiatrist who is even more dangerous than he is.s";
+
+                ms_context.Movies.Add(movie6);
+
+                Movie movie7 = new Movie();
+                movie7.Name = "The King's Man";
+                movie7.Rating = 6.5;
+                movie7.Description = "As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man must race against time to stop them.";
+
+                ms_context.Movies.Add(movie7);
+
+                Movie movie8 = new Movie();
+                movie8.Name = "The Jack in the Box: Awakening ";
+                movie8.Rating = 4.3;
+                movie8.Description = "When a vintage Jack-in-the-box is opened by a dying woman, she enters into a deal with the demon within that would see her illness cured in return for helping it claim six innocent victims.";
+
+                ms_context.Movies.Add(movie8);
+
+                Movie movie9 = new Movie();
+                movie9.Name = "Uncharted";
+                movie9.Rating = 6.8;
+                movie9.Description = "A young street-smart, Nathan Drake and his wisecracking partner Victor “Sully” Sullivan embark on a dangerous pursuit of “the greatest treasure never found” while also tracking clues that may lead to Nathan’s long-lost brother.";
+
+                ms_context.Movies.Add(movie9);
+
+                Movie movie10 = new Movie();
+                movie10.Name = "The Matrix Resurrections";
+                movie10.Rating = 5.7;
+                movie10.Description = "Plagued by strange memories, Neo's life takes an unexpected turn when he finds himself back inside the Matrix.";
+
+                ms_context.Movies.Add(movie10);
+
+                ms_context.SaveChanges();
+
+            //var toBeRemoved = ms_context.Movies.FirstOrDefault(m => m.Name == "Spider-Man: No Way Home");
+            //ms_context.Movies.Remove(toBeRemoved);
+
+            ms_context.SaveChanges();
+
+SERIES-----------------------------------------------------------------
+                Series series = new Series();
+                series.Name = "Peacemaker";
+                series.Rating = 8.5;
+                series.Description = "The continuing story of Peacemaker – a compellingly vainglorious man who believes in peace at any cost, no matter how many people he has to kill to get it – in the aftermath of the events of “The Suicide Squad.”";
+                ms_context.Series.Add(series);
+                ms_context.SaveChanges();
+
+                Series series2 = new Series();
+                series2.Name = "Euphoria";
+                series2.Rating = 8.4;
+                series2.Description = "A group of high school students navigate love and friendships in a world of drugs, sex, trauma, and social media.";
+                ms_context.Series.Add(series2);
+
+                Series series3 = new Series();
+                series3.Name = "The Walking Dead";
+                series3.Rating = 8.1;
+                series3.Description = "Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way.";
+                ms_context.Series.Add(series3);
+
+                Series series4 = new Series();
+                series4.Name = "Peaky Blinders";
+                series4.Rating = 8.8;
+                series4.Description = "A gangster family epic set in 1919 Birmingham, England and centered on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby, who means to move up in the world.";
+                ms_context.Series.Add(series4);
+
+                Series series5 = new Series();
+                series5.Name = "Game of Thrones";
+                series5.Rating = 9.2;
+                series5.Description = "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.";
+                ms_context.Series.Add(series5);
+
+		Series series6 = new Series();
+                series6.Name = "Stranger Things";
+                series6.Rating = 6.7;
+                series6.Description = "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.";
+
+                ms_context.Series.Add(series6);
+
+                Series series7 = new Series();
+                series7.Name = "Lucifer";
+                series7.Rating = 8.1;
+                series7.Description = "Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape.";
+
+                ms_context.Add(series7);
+
+                Series series8 = new Series();
+                series8.Name = "All of Us Are Dead";
+                series8.Rating = 7.6;
+                series8.Description = "A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out — or turn into one of the rabid infected.";
+
+                ms_context.Add(series8);
+
+                Series series9 = new Series();
+                series9.Name = "Squid Game";
+                series9.Rating = 8;
+                series9.Description = "Hundreds of cash-strapped players accept a strange invitation to compete in children's games—with high stakes. But, a tempting prize awaits the victor.";
+
+                ms_context.Add(series9);
+
+                Series series10 = new Series();
+                series10.Name = "Breaking Bad";
+                series10.Rating = 9.4;
+                series10.Description = "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.";
+
+                ms_context.Add(series10);
+
+                ms_context.SaveChanges();
