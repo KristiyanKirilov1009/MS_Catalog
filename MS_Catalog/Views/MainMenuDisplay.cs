@@ -86,8 +86,18 @@ namespace MS_Catalog.Presentation
                     Console.Write($"Enter your username => ");
                     string username = Console.ReadLine();
 
+                    if (username == "")
+                    {
+                        throw new ArgumentException("Password cannot be null!");
+                    }
+
                     Console.Write("Enter your new password => ");
                     string newPass = Console.ReadLine();
+
+                    if(newPass == "")
+                    {
+                        throw new ArgumentException("Password cannot be null!");
+                    }
 
                     userCtrl.ForgotPassword(username, newPass);
 
@@ -141,8 +151,18 @@ namespace MS_Catalog.Presentation
                     Console.Write("Enter username: ");
                     string username = Console.ReadLine();
 
+                    if(username == "")
+                    {
+                        throw new ArgumentException("Username cannot be null!");
+                    }
+
                     Console.Write("Enter password: ");
                     string password = Console.ReadLine();
+
+                    if (password == "")
+                    {
+                        throw new ArgumentException("Pasword cannot be null!");
+                    }
 
                     UserCtrl home = new UserCtrl();
                     home.Registration(username, password);
@@ -176,9 +196,19 @@ namespace MS_Catalog.Presentation
 
                     Console.Write("Username: ");
                     string username = Console.ReadLine();
+                    
+                    if(username == "")
+                    {
+                        throw new ArgumentException("Username cannot be null!");
+                    }
 
                     Console.Write("Password: ");
                     string password = Console.ReadLine();
+
+                    if (username == "")
+                    {
+                        throw new ArgumentException("Password cannot be null!");
+                    }
 
                     userCtrl.LogIn(username, password);
 

@@ -98,6 +98,7 @@ namespace MS_Catalog.Controller
         public void ChangePassword(int userId, string newP)
         {
             User user = userDAO.GetUserById(userId);
+
             user.Password = newP;
 
             userDAO.SaveChanges();
@@ -115,7 +116,7 @@ namespace MS_Catalog.Controller
 
             if (userDAO.GetUserByUsername(newU) != null)
             {
-                throw new ArgumentException("There is already username like this! Try again");
+                throw new ArgumentException("There is already username like this! Try again!");
             }
 
             user.UserName = newU;

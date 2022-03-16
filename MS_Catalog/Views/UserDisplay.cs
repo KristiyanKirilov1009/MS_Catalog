@@ -122,7 +122,7 @@ namespace MS_Catalog.Presentation
         }
 
         /// <summary>
-        /// Gets all the movies and their ratings from database.
+        /// Gets all the movies and their ratings from controller.
         /// </summary>
         private void SeeAllMovies()
         {
@@ -149,7 +149,7 @@ namespace MS_Catalog.Presentation
         }
 
         /// <summary>
-        /// Gets all the series and their ratings from database.
+        /// Gets all the series and their ratings from controller.
         /// </summary>
         private void SeeAllSeries()
         {
@@ -608,6 +608,11 @@ namespace MS_Catalog.Presentation
                     Console.Write("Enter your new password => ");
                     string newPassword = Console.ReadLine();
 
+                    if (newPassword == "")
+                    {
+                        throw new ArgumentException("Username cannot be null!");
+                    }
+
                     userCtrl.ChangePassword(current.UserId, newPassword);
 
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -643,6 +648,11 @@ namespace MS_Catalog.Presentation
 
                     Console.Write("Enter your new username => ");
                     string newUsername = Console.ReadLine();
+
+                    if( newUsername == "")
+                    {
+                        throw new ArgumentException("Username cannot be null!");
+                    }
 
                     userCtrl.ChangeUsername(current.UserId, newUsername);
 

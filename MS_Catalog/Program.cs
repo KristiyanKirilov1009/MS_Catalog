@@ -18,7 +18,9 @@ namespace MS_Catalog
             }
             catch (ArgumentException e)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(e.Message);
+                Console.ForegroundColor= ConsoleColor.White;
             }
         }
     }
