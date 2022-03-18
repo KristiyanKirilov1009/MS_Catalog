@@ -20,7 +20,7 @@ namespace MS_Catalog.Presentation
         private User current = null;
         public UserDisplay(User user)
         {
-            if (user == null) throw new ArgumentException("The user is null");
+            if (user == null) throw new ArgumentException("The user is null!");
             current = user;
         }
 
@@ -608,11 +608,6 @@ namespace MS_Catalog.Presentation
                     Console.Write("Enter your new password => ");
                     string newPassword = Console.ReadLine();
 
-                    if (newPassword == "")
-                    {
-                        throw new ArgumentException("Username cannot be null!");
-                    }
-
                     userCtrl.ChangePassword(current.UserId, newPassword);
 
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -648,11 +643,6 @@ namespace MS_Catalog.Presentation
 
                     Console.Write("Enter your new username => ");
                     string newUsername = Console.ReadLine();
-
-                    if( newUsername == "")
-                    {
-                        throw new ArgumentException("Username cannot be null!");
-                    }
 
                     userCtrl.ChangeUsername(current.UserId, newUsername);
 

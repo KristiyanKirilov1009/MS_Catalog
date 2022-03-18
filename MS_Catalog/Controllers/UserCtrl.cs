@@ -30,6 +30,16 @@ namespace MS_Catalog.Controller
                 throw new ArgumentException("There is no such a user!");
             }
 
+            if (username == "")
+            {
+                throw new ArgumentException("Username cannot be null!");
+            }
+
+            if (newP == "")
+            {
+                throw new ArgumentException("Password cannot be null!");
+            }
+
             currentUser.Password = newP;
 
             userDAO.SaveChanges();
@@ -51,6 +61,16 @@ namespace MS_Catalog.Controller
                 throw new Exception("Invalid username or password!");
             }
 
+            if (username == "")
+            {
+                throw new ArgumentException("Username cannot be null!");
+            }
+
+            if (password == "")
+            {
+                throw new ArgumentException("Password cannot be null!");
+            }
+
             LoadUserView(currentUser);
         }
 
@@ -68,6 +88,16 @@ namespace MS_Catalog.Controller
             if (currentUser != null)
             {
                 throw new ArgumentException("This username is already taken!");
+            }
+
+            if (username == "")
+            {
+                throw new ArgumentException("Username cannot be null!");
+            }
+
+            if (password == "")
+            {
+                throw new ArgumentException("Pasword cannot be null!");
             }
 
             selectedUser.UserName = username;
@@ -99,6 +129,11 @@ namespace MS_Catalog.Controller
         {
             User user = userDAO.GetUserById(userId);
 
+            if (newP == "")
+            {
+                throw new ArgumentException("Password cannot be null!");
+            }
+
             user.Password = newP;
 
             userDAO.SaveChanges();
@@ -117,6 +152,11 @@ namespace MS_Catalog.Controller
             if (userDAO.GetUserByUsername(newU) != null)
             {
                 throw new ArgumentException("There is already username like this! Try again!");
+            }
+
+            if (newU == "")
+            {
+                throw new ArgumentException("Username cannot be null!");
             }
 
             user.UserName = newU;
