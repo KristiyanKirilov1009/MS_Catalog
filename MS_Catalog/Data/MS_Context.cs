@@ -25,10 +25,10 @@ namespace MS_Catalog.Data
         {
             MySqlConnectionStringBuilder sqlConnectionStringBuilder = new MySqlConnectionStringBuilder();
             sqlConnectionStringBuilder.Server = "localhost";
-            sqlConnectionStringBuilder.UserID = "root";
+            sqlConnectionStringBuilder.UserID = "newuser";
             sqlConnectionStringBuilder.Database = "MS_Database";
             sqlConnectionStringBuilder.Port = 3306;
-            sqlConnectionStringBuilder.Password = "kirilov1009";
+            sqlConnectionStringBuilder.Password = "12345";
 
             return sqlConnectionStringBuilder.ConnectionString;
         }
