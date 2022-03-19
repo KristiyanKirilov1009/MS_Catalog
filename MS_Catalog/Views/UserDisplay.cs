@@ -370,7 +370,7 @@ namespace MS_Catalog.Presentation
             try
             {
                 Console.ForegroundColor = ConsoleColor.DarkBlue;
-                Console.Write("Which movie do you want to read for? - ");
+                Console.Write("Which series do you want to read for? - ");
                 Console.ForegroundColor = ConsoleColor.White;
 
                 int id = int.Parse(Console.ReadLine());
